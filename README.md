@@ -1,5 +1,4 @@
-# Quicksilver Postdeploy
-
+# Quicksilver Deployment Tools
 
 This Quicksilver project is used for automation of post-deployment tasks on Pantheon platform.
 
@@ -40,5 +39,5 @@ workflows:
     after:
       - type: webphp
         description: Import configuration from .yml files
-        script: private/scripts/quicksilver-postdeploy/postdeploy.php
+        script: private/scripts/quicksilver-deploy-tools/postdeploy.php
 ```

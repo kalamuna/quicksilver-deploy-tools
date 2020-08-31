@@ -1,5 +1,5 @@
 {
-  "name": "kalamuna/quicksilver-postdeploy",
+  "name": "kalamuna/quicksilver-deploy-tools",
   "description": "Runs postedployment commands such as clear cache and configuration import.",
   "type": "quicksilver-script",
   "require": {
