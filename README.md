@@ -23,7 +23,7 @@ In order for this to work, you should have the following in your composer.json f
 
 The project can be included by using the command:
 
-`composer require kalamuna/quicksilver-postdeploy`
+`composer require kalamuna/quicksilver-deploy-tools`
 
 Don't forget to update the `pantheon.yml` file for your Drupal 8/9 installation.
 
