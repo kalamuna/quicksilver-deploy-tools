@@ -15,7 +15,7 @@ In order for this to work, you should have the following in your composer.json f
   },
   "extra": {
     "installer-paths": {
-      "web/private/scripts/quicksilver": ["type:quicksilver-script"]
+      "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
     }
   }
 }
