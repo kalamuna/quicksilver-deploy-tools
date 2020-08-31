@@ -1,0 +1,9 @@
+{
+  "name": "kalamuna/quicksilver-postdeploy",
+  "description": "Runs postedployment commands such as clear cache and configuration import.",
+  "type": "quicksilver-script",
+  "require": {
+    "composer/installers": "~1.0"
+  },
+  "license": "MIT"
+}
