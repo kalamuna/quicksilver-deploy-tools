@@ -4,14 +4,17 @@ This Quicksilver project is used for automation of post-deployment tasks on Pant
 
 ### Installation
 
-This project is designed to be included from a site's `composer.json` file, and placed in its appropriate installation directory by [Composer Installers](https://github.com/composer/installers).
+This project is designed to be included from a site's `composer.json` file, and placed in its appropriate installation directory by [Composer Installers](https://github.com/composer/installers). 
+
+It has to also include custom quick-silver installer as composer installer doesn't support the quicksilver-script type.
 
 In order for this to work, you should have the following in your composer.json file:
 
 ```json
 {
   "require": {
-    "composer/installers": "^1.0.20"
+    "composer/installers": "^1.0.20",
+    "rvtraveller/qs-composer-installer": "1.0"
   },
   "extra": {
     "installer-paths": {
