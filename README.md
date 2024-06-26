@@ -6,19 +6,15 @@ This Quicksilver project is used for automation of post-deployment tasks on Pant
 
 This project is designed to be included from a site's `composer.json` file, and placed in its appropriate installation directory by [Composer Installers](https://github.com/composer/installers). 
 
-It has to also include custom quick-silver installer as composer installer doesn't support the quicksilver-script type.
+It is defined as a quicksilver script, which means composer should install it in `web/private/scripts/quicksilver/{$name}` by default.
 
-In order for this to work, you should have the following in your composer.json file:
+You can override this by adding an installer-paths configuration, for example:
 
 ```json
 {
-  "require": {
-    "composer/installers": "^1.0.20",
-    "rvtraveller/qs-composer-installer": "1.0"
-  },
   "extra": {
     "installer-paths": {
-      "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+      "docroot/private/scripts/pantheonscripts/{$name}/": ["type:quicksilver-script"]
     }
   }
 }
@@ -38,6 +34,11 @@ Here's an example of what your `pantheon.yml` would look like if this were the o
 api_version: 1
 
 workflows:
+  deploy:
+    after:
+      - type: webphp
+        description: Import configuration from .yml files
+        script: private/scripts/quicksilver/quicksilver-deploy-tools/postdeploy.php
   sync_code:
     after:
       - type: webphp

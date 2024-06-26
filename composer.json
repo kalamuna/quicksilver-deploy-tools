@@ -3,7 +3,7 @@
   "description": "Runs postedployment commands such as clear cache and configuration import.",
   "type": "quicksilver-script",
   "require": {
-    "composer/installers": "^2"
+    "composer/installers": "^2.0.1"
   },
   "license": "MIT"
 }
