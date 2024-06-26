@@ -6,20 +6,6 @@ This Quicksilver project is used for automation of post-deployment tasks on Pant
 
 This project is designed to be included from a site's `composer.json` file, and placed in its appropriate installation directory by [Composer Installers](https://github.com/composer/installers). 
 
-It is defined as a quicksilver script, which means composer should install it in `web/private/scripts/quicksilver/{$name}` by default.
-
-You can override this by adding an installer-paths configuration, for example:
-
-```json
-{
-  "extra": {
-    "installer-paths": {
-      "docroot/private/scripts/pantheonscripts/{$name}/": ["type:quicksilver-script"]
-    }
-  }
-}
-```
-
 The project can be included by using the command:
 
 `composer require kalamuna/quicksilver-deploy-tools`
